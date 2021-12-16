@@ -83,10 +83,10 @@ def handle_as_controller(writer, msg):
     writer.flush()
 
 def handle(reader, writer):
-    # ## write to authenticator
-    # writer.write(json.dumps(stub_capport_msg))
-    # writer.write("\n")
-    # writer.flush()
+    ## write to authenticator
+    writer.write(json.dumps(stub_capport_msg))
+    writer.write("\n")
+    writer.flush()
 
     ## Now listen
     line = reader.readline()
