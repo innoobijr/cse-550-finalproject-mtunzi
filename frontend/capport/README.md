@@ -24,15 +24,15 @@ Follow the following instruction to test the user login flow of the captive port
 
 Note: assume that you have already activated your virtual environment
 
-'''sh
+```sh
     python3 auth.py
-'''
+```
 
 3. In the current `capport` directory, runs
 
-'''sh
+```sh
     ./run
-'''
+```
 
 4. Open a browser and direct to 'localhost' port 5000
 
