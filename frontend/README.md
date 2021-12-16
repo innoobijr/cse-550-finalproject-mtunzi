@@ -51,7 +51,7 @@ as if it comes from the actual captive portal. This message will use to authenti
 user on the freeRADIUS server.
 2. Then it listens for the response from the authenticator for the
 authentication result. 
-3. Sends a stub message back to the authenticator that the flow rule has been adjusted based on the authentication result previusly
+3. Sends a stub message back to the authenticator that the flow rule has been adjusted based on the authentication result previously
 
 After the communication complete, the user supposely will be unblocked from the waiting page and redirected to dashboard page. But in the current implemenation, we expect to see the success message as a reponse. 
 

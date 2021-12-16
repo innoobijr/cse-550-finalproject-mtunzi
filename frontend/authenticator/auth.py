@@ -56,17 +56,16 @@ class Authenticator():
         self.conns = {}
 
         # TODO: need to match everytime ip changes
-        self.radius = radius.Radius(self.secret, host='10.18.231.160', port=1812)
+        self.radius = radius.Radius(self.secret, host='192.168.0.5', port=1812)
 
         print(f"[RAD SOCKET CONNECTED]: A radius socket is connected on {self.radius}")
 
     def start(self):
         self.create_server_socket()
 
-        # # TODO: ONLY for TESTING
-        # self.listen_to_server_socket_stub()
-
-        self.listen_to_server_socket()
+        # TODO: ONLY for TESTING
+        self.listen_to_server_socket_stub()
+        # self.listen_to_server_socket()
 
 
     def create_server_socket(self):
@@ -104,8 +103,6 @@ class Authenticator():
             if msg['type'] == Message.INFORM_AUTH.value:
 
                 status = msg['data']['status']
-                print(f"----STATUS: {status}")
-                print(f"----Message.AUTHENTICATE_CLIENT.value: {Message.AUTHENTICATE_CLIENT.value}")
 
                 if (status == Message.AUTHENTICATE_CLIENT.value): 
                     eventlet.spawn_n(self.do_on_authenticate_client, msg)
@@ -193,6 +190,10 @@ class Authenticator():
     def do_on_authenticate_client(self, msg):
         username = msg['data']['email']
         password = msg['data']['password']
+
+
+        print('-----------> user is HEREEE')
+        
 
         if self.radius.authenticate(username, password):
             msg['data']['status'] =  Message.USER_AUTHENTICATED.value

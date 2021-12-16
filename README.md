@@ -31,6 +31,8 @@ Due to the time constraint, the captive poral (i.e. the flask application) was n
 ```
 Authenticated, you're good to go!
 ```
+This presents the complete flow communication from the capport ---> authen & radius ---> controller ----> authen ---> capport
+
 
 ### **Collaborators**
 
