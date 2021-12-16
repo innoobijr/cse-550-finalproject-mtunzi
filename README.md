@@ -22,7 +22,7 @@ on the virtual machine that runs the freeRADIUS on. Note that you will be requir
 
 ### **Bugs/shortcomings**
 
-Due to the time constraint, the captive poral (i.e. the flask application) was not able to do the redirection based on the response back from the authenticator yet (i.e. the authenticaiton result whether or not user is authenticated). But the `test.py` will show the complete flow by logging the following in the terminal. 
+Due to the time constraint, the captive poral (i.e. the flask application) was not able to do the redirection based on the response back from the authenticator yet (i.e. the authentication result whether or not user is authenticated). But the `test.py` will show the complete flow by logging the following in the terminal. 
 ```
 Authenticated, you're good to go!
 ```
