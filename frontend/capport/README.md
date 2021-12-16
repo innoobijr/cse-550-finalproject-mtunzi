@@ -2,16 +2,12 @@
 
 The captive portal flask applicaion will run indepently in a seperate terminal. This submission form will currently take one of the two credentials, either one should work to test the capptive portal submission 
 
-'''sh
-email: firn@test.com
-password: 1234 
+`email: firn@test.com` , `password: 1234 `
 
 or 
 
-email: alice
-password: passme
+`email: alice`, `password: passme`
 
-'''
 
 These two are the only ones that are already registered to backend of the freeRADIUS server. 
 
