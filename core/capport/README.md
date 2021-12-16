@@ -1,5 +1,4 @@
-# Basil
-Basil - a lightweight software access controller with a captive portal support
+## Captive Portal
 
 # Instructions
 
