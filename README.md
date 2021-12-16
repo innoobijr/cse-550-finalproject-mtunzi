@@ -12,8 +12,13 @@ The goal is to design and develop a network access control and authorization mec
 ![Mtunzi System Architecture](frontend/architecture.png)
 
 ### **What are in here**
-This repository includes `frontend` directory, which includes capport application and authentication setup. In the directory, you will find authenticator (i.e. the `authenticator` directory) and captive portal (i.e. the `capport` directory) codebase as well as the intructions to test the autentication process (i.e. `test.py` file).
 
+#### Authentication process
+This repository includes `frontend` directory, which includes capport application and authentication setup. In the directory, you will find authenticator (i.e. the `authenticator` directory) and captive portal (i.e. the `capport` directory) codebase as well as the intructions to test the autentication process (i.e. `test.py` file). This process needs to run on the virtual environment. Please make sure to be in the `frontend` directory before installing the virtual environments. Please see more detials about how to set up inside the `frontend` directory.
+
+
+
+#### Mininet and RADIUS server setup
 The directory `mininet-setup` has the freeRADIUS server configuration files. The IP address of the client name *tester* under both `clients.conf` and `client.conf` needs to match with the local IP address of the local computer that runs the authenticator on. After the mentioned modification completets, all 3 files need to replace the files (under the same name) locate at 
 ```
 ~/etc/mininet/freeradius
